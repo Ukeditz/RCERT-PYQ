@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RCERT PYQ Papers</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body { scroll-behavior: smooth; }
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+  <!-- Navbar -->
+  <header class="bg-indigo-600 text-white p-4 flex justify-between items-center">
+    <h1 class="text-xl font-bold">RCERT PYQ Papers</h1>
+    <nav>
+      <a href="#cse" class="mx-3 hover:underline">CSE</a>
+      <a href="#civil" class="mx-3 hover:underline">Civil</a>
+      <a href="#mech" class="mx-3 hover:underline">Mechanical</a>
+      <a href="#electrical" class="mx-3 hover:underline">Electrical</a>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="text-center py-10 bg-gradient-to-r from-indigo-500 to-purple-600 text-white">
+    <h2 class="text-3xl md:text-4xl font-bold">Find All Previous Year Papers</h2>
+    <p class="mt-3 text-lg">DBATU | RCERT | All Branches | Free PDF Download</p>
+    <input type="text" placeholder="Search Subject..." 
+           class="mt-5 px-4 py-2 rounded-full text-gray-800 w-80">
+  </section>
+
+  <!-- Content Section -->
+  <div class="max-w-5xl mx-auto p-6">
+
+    <!-- CSE -->
+    <h3 id="cse" class="text-2xl font-semibold text-indigo-600 mt-8 mb-4">Computer Science</h3>
+    <div class="grid md:grid-cols-2 gap-6">
+      <div class="bg-white p-6 rounded-2xl shadow hover:shadow-lg transition">
+        <h4 class="font-bold text-lg">Engineering Chemistry (2023)</h4>
+        <p class="text-sm text-gray-500">1st Semester</p>
+        <a href="https://drive.google.com/file/d/1ABCD123XYZ/view?usp=sharing" target="_blank" 
+           class="inline-block mt-3 px-4 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700">📥 Download PDF</a>
+      </div>
+      <div class="bg-white p-6 rounded-2xl shadow hover:shadow-lg transition">
+        <h4 class="font-bold text-lg">Data Structures (2022)</h4>
+        <p class="text-sm text-gray-500">2nd Semester</p>
+        <a href="https://drive.google.com/file/d/1XYZ456ABC/view?usp=sharing" target="_blank" 
+           class="inline-block mt-3 px-4 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700">📥 Download PDF</a>
+      </div>
+    </div>
+
+    <!-- Civil -->
+    <h3 id="civil" class="text-2xl font-semibold text-indigo-600 mt-8 mb-4">Civil Engineering</h3>
+    <div class="bg-white p-6 rounded-2xl shadow hover:shadow-lg transition">
+      <h4 class="font-bold text-lg">Basic Civil Engg. (2023)</h4>
+      <p class="text-sm text-gray-500">1st Semester</p>
+      <a href="https://drive.google.com/file/d/1LMNOP987/view?usp=sharing" target="_blank" 
+         class="inline-block mt-3 px-4 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700">📥 Download PDF</a>
+    </div>
+
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-indigo-600 text-white text-center p-4 mt-10">
+    <p>© 2025 RCERT PYQ Papers | Made with ❤️ by Upen kamble</p>
+  </footer>
+
+  <!-- JS Search Script -->
+  <script>
+    const searchInput = document.querySelector("input[type='text']");
+    const cards = document.querySelectorAll(".bg-white");
+
+    searchInput.addEventListener("keyup", function() {
+      const value = searchInput.value.toLowerCase();
+      cards.forEach(card => {
+        let text = card.innerText.toLowerCase();
+        card.style.display = text.includes(value) ? "block" : "none";
+      });
+    });
+  </script>
+
+</body>
+</html>
